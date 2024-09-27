@@ -1,0 +1,1032 @@
+<html>
+<style>
+html {
+  cursor: none;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+  &:focus {
+    outline: none;
+  }
+}
+
+
+#circle {
+  position: fixed;
+  z-index: 5;
+  width: 8px;
+  height: 8px;
+  background-color: black;
+  border-radius: 50%;
+  pointer-events: none;
+  transition:
+    background ease-in 10ms,
+    box-shadow ease-in 150ms,
+    transform ease-in 150ms;
+  transform: translate3d(0, 0, 0);
+}
+
+#container {
+   -webkit-touch-callout: none; 
+    -webkit-user-select: none; 
+     -khtml-user-select: none; 
+       -moz-user-select: none; 
+        -ms-user-select: none; 
+            user-select: none;
+}
+
+#container:hover ~ #circle {
+  background-color: transparent;
+  box-shadow: 0 0 0 3px black;
+  
+   -webkit-touch-callout: none; 
+    -webkit-user-select: none; 
+     -khtml-user-select: none; 
+       -moz-user-select: none; 
+        -ms-user-select: none; 
+            user-select: none;
+}
+
+
+
+</style>
+<body id="html" style="width:100vw;transition: 0.8s ease;transition: background 6.93s ease;" ailgn="center" onload="navtime()">
+<h1 style="align:center;text-align:center;">Make All Zero! [MAZ]</h1><hr style='width:30vw;align:center;text-align:center;'></br>
+<div style='display:flex;flex-direction:column;width:99vw;max-width:99vw;text-align:center;justify:center;align:center;font-size:250%;' id='container'>
+<div style='flex-direction:row;max-width:98vw;' id='row1'>
+  <span id='box1' style='order:1;width:24vw;padding:0.5vw;hieght:24vw;' class='box' onclick='document.getElementById("viewmap").innerHTML+="1,";lightsout(this.id,this.innerHTML);'>0</span>
+  <span id='box2' style='order:2;width:24vw;padding:0.5vw;hieght:24vw;' class='box' onclick='document.getElementById("viewmap").innerHTML+="2,";lightsout(this.id,this.innerHTML);'>0</span>
+  <span id='box3' style='order:3;width:24vw;padding:0.5vw;hieght:24vw;' class='box' onclick='document.getElementById("viewmap").innerHTML+="3,";lightsout(this.id,this.innerHTML);'>0</span>
+  <span id='box4' style='order:4;width:24vw;padding:0.5vw;hieght:24vw;' class='box' onclick='document.getElementById("viewmap").innerHTML+="4,";lightsout(this.id,this.innerHTML);'>0</span>
+</div>
+<div style='flex-direction:row;max-width:98vw;' id='row2'>
+  <span id='box5' style='order:5;width:24vw;padding:0.5vw;hieght:24vw;' class='box' onclick='document.getElementById("viewmap").innerHTML+="5,";lightsout(this.id,this.innerHTML);'>0</span>
+  <span id='box6' style='order:6;width:24vw;padding:0.5vw;hieght:24vw;' class='box' onclick='document.getElementById("viewmap").innerHTML+="6,";lightsout(this.id,this.innerHTML);'>0</span>
+  <span id='box7' style='order:7;width:24vw;padding:0.5vw;hieght:24vw;' class='box' onclick='document.getElementById("viewmap").innerHTML+="7,";lightsout(this.id,this.innerHTML);'>0</span>
+  <span id='box8' style='order:8;width:24vw;padding:0.5vw;hieght:24vw;' class='box' onclick='document.getElementById("viewmap").innerHTML+="8,";lightsout(this.id,this.innerHTML);'>0</span>
+</div>
+<div style='flex-direction:row;max-width:98vw;' id='row3'>
+  <span id='box9'  style='order:9; width:24vw;padding:0.5vw;hieght:24vw;' class='box' onclick='document.getElementById("viewmap").innerHTML+="9,";lightsout(this.id,this.innerHTML);'>0</span>
+  <span id='box10' style='order:10;width:24vw;padding:0.5vw;hieght:24vw;' class='box' onclick='document.getElementById("viewmap").innerHTML+="10,";lightsout(this.id,this.innerHTML);'>0</span>
+  <span id='box11' style='order:11;width:24vw;padding:0.5vw;hieght:24vw;' class='box' onclick='document.getElementById("viewmap").innerHTML+="11,";lightsout(this.id,this.innerHTML);'>0</span>
+  <span id='box12' style='order:12;width:24vw;padding:0.5vw;hieght:24vw;' class='box' onclick='document.getElementById("viewmap").innerHTML+="12,";lightsout(this.id,this.innerHTML);'>0</span>
+</div>
+<div style='flex-direction:row;max-width:98vw;' id='row4'>
+  <span id='box13' style='order:13;width:24vw;padding:0.5vw;hieght:24vw;' class='box' onclick='document.getElementById("viewmap").innerHTML+="13,";lightsout(this.id,this.innerHTML);'>0</span>
+  <span id='box14' style='order:14;width:24vw;padding:0.5vw;hieght:24vw;' class='box' onclick='document.getElementById("viewmap").innerHTML+="14,";lightsout(this.id,this.innerHTML);'>0</span>
+  <span id='box15' style='order:15;width:24vw;padding:0.5vw;hieght:24vw;' class='box' onclick='document.getElementById("viewmap").innerHTML+="15,";lightsout(this.id,this.innerHTML);'>0</span>
+  <span id='box16' style='order:16;width:24vw;padding:0.5vw;hieght:24vw;' class='box' onclick='document.getElementById("viewmap").innerHTML+="16,";lightsout(this.id,this.innerHTML);'>0</span>
+</div>
+<div style='flex-direction:row;max-width:98vw;' id='row0'>
+  <span id='box0' style='order:17;width:24vw;padding:0.5vw;hieght:24vw;' class='box' onclick='document.getElementById("viewmap").innerHTML+="0,";lightsout(this.id,this.innerHTML);'>1</span>
+</div>
+
+</div>
+
+</br></br></br>
+
+<div id='output' style='display:flex;flex-direction:column;width:99vw;max-width:99vw;text-align:center;justify:center;align:center;font-size:250%;'>
+  <div style='max-width:98vw;align:center;justify:center;text-align:center;padding-left:28vw;padding-right:32vw;overflow:auto;' id='data'>
+    <span style='flex-direction:row;order:19;width:31vw;padding:0.5vw;hieght:24vw;overflow:none;justify:center;text-align:center;align:center;' title='End-Output'>&nbsp;&nbsp;<span id='endput'></span></span>
+	<hr style='width:33.69vw;margin-left:5vw;'>
+	<span style='flex-direction:row;order:18;width:27vw;padding:0.5vw;hieght:24vw;overflow:auto;word-break:break-word;white-space:break;justify:center;text-align:center;align:center;' title='View-Map'>&nbsp;&nbsp;<span id='viewmap' ></span></span>
+  </div>
+  </br>
+</div>
+
+<span id='nvt' style='display:none'>North,East,South,West</span> <!--available directions/destinations-->
+<span id='navnow' style='display:none'></span> <!--current pointing direction-->
+<span id='ram' style='display:none'>0</span> <!--used for transferring data as needed-->
+<span id='rom' style='display:none'>0</span> <!--internal RAM or function-ROM-->
+<span id='proofs' style='display:none'></span> 
+<div id="circle" style='display:none' ></div> <!--cursor-->
+
+
+</body>
+<script>
+
+const circle = document.getElementById('circle');
+const circleStyle = circle.style;
+
+document.addEventListener('mousemove', e => {  //pulls in cirlce cursor
+  window.requestAnimationFrame(() => {
+   document.getElementById('circle').style.display = "inline-block";
+    circleStyle.top = `${ e.clientY - circle.offsetHeight/2 }px`;
+    circleStyle.left = `${ e.clientX - circle.offsetWidth/2 }px`;
+  });
+});
+
+
+
+
+function navtime() {  //gets a random starting position
+ var nn = [];
+ var nav = document.getElementById('nvt').innerHTML;
+ var whn = Number(nav.toString().search(','));
+ 
+ for(i = 0; i<Number(Math.abs(Number(whn)-1)); i++){
+  nn.push(nav.toString().split(',')[whn]);
+ }
+ 
+ document.getElementById('navnow').innerHTML = Math.floor(Math.random()*nn.length);
+ 
+ time();
+ 
+ }
+ 
+ function time(){  //going in order after starting position
+ var timer = Math.abs(Number(document.getElementById('navnow').innerHTML)+1);
+ 
+ 
+ if(timer < 0 || timer > 3){
+  timer = 0;
+ }
+ 
+ 
+ document.getElementById('navnow').innerHTML = timer;
+
+ 
+
+  setTimeout(time, 1000);  
+
+}
+
+
+
+function lightsout(x,boxcolor) {
+ var location = x.toString().split('box')[1]; //number after "box"
+ var bcolor = [];
+ var lc = document.getElementById('rom').innerHTML; <!-- tracks current loop progress -->
+ var ram = document.getElementById('ram').innerHTML <!-- special transfer data-->
+ var bcl = '';
+ var direct = document.getElementById("navnow").innerHTML;
+ 
+ 
+ if(lc == 0){ //first drop (full range) //where are you = [find a slot to land]
+  var zero = [10,7,6,11], one = [0,2,13,5], two = [1,3,14,6], three = [2,4,15,7], four = [3,0,16,8], five = [0,6,1,9];
+  var six = [5,7,2,10], seven = [6,8,3,11], eight = [7,0,4,12], nine = [0,10,5,13], ten = [9,11,6,14];
+  var eleven = [10,12,7,15], tweleve = [11,0,8,16], thirteen = [0,14,9,1], fourteen = [13,15,10,2], fifthteen = [14,16,11,3], sixteen = [15,0,12,4];
+  
+  var romcheck = document.getElementById('rom').innerHTML
+  document.getElementById('rom').innerHTML = Math.abs(Number(romcheck) + 1);
+ }
+ else if(lc == 1){ //first jump (limited-up) //landed value = [must be higher than landed value & limited spread]
+  var zero = [10,7,6,11,1,16,4,13], one = [2,5,0], two = [3,6], three = [4,7], four = [5,8,0], five = [6,9,0];
+  var six = [7,10], seven = [8,11], eight = [9,12,0], nine = [10,13,0], ten = [11,14];
+  var eleven = [12,15], tweleve = [13,16,0], thirteen = [14,0], fourteen = [15,0], fifthteen = [16,0], sixteen = [0,1,4,13];
+  
+  var romcheck = document.getElementById('rom').innerHTML
+  document.getElementById('rom').innerHTML = Math.abs(Number(romcheck) + 1);
+ }
+ else if(lc == 2 && ram == 0){ //second jump (physically-split) //landed = [split to physically touching slots & must be higher than landed value]
+  var zero = [5,6,7,8,9,10,11,12], one = [2,5,6], two = [3,5,6,7], three = [4,6,7,8], four = [8,7], five = [6,9,10,0];
+  var six = [7,9,10,11,0], seven = [8,10,11,12,0], eight = [12,11,0], nine = [10,13,14,0], ten = [11,13,14,15,0];
+  var eleven = [12,14,15,16,0], tweleve = [16,15,0], thirteen = [14], fourteen = [15], fifthteen = [16], sixteen = [0];
+  
+  var romcheck = document.getElementById('rom').innerHTML
+  document.getElementById('rom').innerHTML = Math.abs(Number(romcheck) + 1);
+  
+  document.getElementById('ram').innerHTML = 1;
+ 
+ }
+ else if(ram == 1){ //second jump (physically-split [reduced to primes]) //landed = [split to physically touching slots [primes only] & must be higher than landed value]
+  var zero = [5,7,9,11], one = [5], two = [3,5,7], three = [7,0], four = [7], five = [9];
+  var six = [7,9,11], seven = [11], eight = [11,0], nine = [13], ten = [11,13,15];
+  var eleven = [15,0], tweleve = [15], thirteen = [0], fourteen = [15,1], fifthteen = [0], sixteen = [0,1];
+  
+  var romcheck = document.getElementById('rom').innerHTML
+  document.getElementById('rom').innerHTML = Math.abs(Number(romcheck) + 1);
+  
+  document.getElementById('ram').innerHTML = 0;
+ 
+ }
+ else { //jump reset
+  var zero = [], one = [], two = [], three = [], four = [], five = [];
+  var six = [], seven = [], eight = [], nine = [], ten = [];
+  var eleven = [], tweleve = [], thirteen = [], fourteen = [], fifthteen = [], sixteen = [];
+
+  document.getElementById('ram').innerHTML = 0;
+  document.getElementById('rom').innerHTML = 0;
+  ended();
+ }
+ 
+ var local = '', maths = '', wha = '';
+ 
+ if(location == 0){
+  maths = Math.floor(Math.random()*Number(zero.length));
+  local = zero[maths];
+  lpull = document.getElementById('box'+local).innerHTML;
+  document.getElementById('box'+location).innerHTML = Math.abs(Number(document.getElementById('box'+location).innerHTML) - Number(local));
+  //document.getElementById('box'+location).innerHTML = "0";
+  
+  ram = document.getElementById('ram').innerHTML;
+   if(ram == 0){
+    var what = document.getElementById('box'+local).innerHTML;
+	
+    wha = Math.trunc(Math.abs(Number(lpull) + Number(local))/3);
+    if(wha < 1){ wha = 0; }
+    if(wha > 99){ wha = 1; }
+    document.getElementById('box'+local).innerHTML = wha;
+
+    setTimeout(lightsout("box"+lpull, what), 1200);
+   }
+   else{
+    wha = Math.trunc(Math.abs(Number(lpull) + Number(local))/2);
+    if(wha < 1){ wha = 0; }
+    if(wha > 99){ wha = 1; }
+    document.getElementById('box'+local).innerHTML = wha;
+	
+	 document.getElementById('proofs').innerHTML = "box" + location + ", " + wha + ", " + direct;
+     colorme("box" + location,wha,direct); //where to color, value to color with, direction for RGBA section selector
+   }
+	
+	 document.getElementById('proofs').innerHTML = "box" + location + ", " + wha + ", " + direct;
+     colorme("box" + location,wha,direct); //where to color, value to color with, direction for RGBA section selector
+ }
+ 
+ if(location == 1){
+  maths = Math.floor(Math.random()*Number(one.length));
+  local = one[maths];
+  lpull = document.getElementById('box'+local).innerHTML;
+  document.getElementById('box'+location).innerHTML = Math.abs(Number(document.getElementById('box'+location).innerHTML) - Number(local));
+  //document.getElementById('box'+location).innerHTML = "0";
+  
+  ram = document.getElementById('ram').innerHTML;
+   if(ram == 0){
+    var what = document.getElementById('box'+local).innerHTML;
+	
+    wha = Math.trunc(Math.abs(Number(lpull) + Number(local))/3);
+    if(wha < 1){ wha = 0; }
+    if(wha > 99){ wha = 1; }
+    document.getElementById('box'+local).innerHTML = wha;
+
+    setTimeout(lightsout("box"+lpull, what), 1200);
+   }
+   else{
+    wha = Math.trunc(Math.abs(Number(lpull) + Number(local))/2);
+    if(wha < 1){ wha = 0; }
+    if(wha > 99){ wha = 1; }
+    document.getElementById('box'+local).innerHTML = wha;
+	
+	 document.getElementById('proofs').innerHTML = "box" + location + ", " + wha + ", " + direct;
+     colorme("box" + location,wha,direct); //where to color, value to color with, direction for RGBA section selector
+   }
+	
+	 document.getElementById('proofs').innerHTML = "box" + location + ", " + wha + ", " + direct;
+     colorme("box" + location,wha,direct); //where to color, value to color with, direction for RGBA section selector
+ }
+ 
+ if(location == 2){
+  maths = Math.floor(Math.random()*Number(two.length));
+  local = two[maths];
+  lpull = document.getElementById('box'+local).innerHTML;
+  document.getElementById('box'+location).innerHTML = Math.abs(Number(document.getElementById('box'+location).innerHTML) - Number(local));
+  //document.getElementById('box'+location).innerHTML = "0";
+  
+  ram = document.getElementById('ram').innerHTML;
+   if(ram == 0){
+    var what = document.getElementById('box'+local).innerHTML;
+	
+    wha = Math.trunc(Math.abs(Number(lpull) + Number(local))/3);
+    if(wha < 1){ wha = 0; }
+    if(wha > 99){ wha = 1; }
+    document.getElementById('box'+local).innerHTML = wha;
+
+    setTimeout(lightsout("box"+lpull, what), 1200);
+   }
+   else{
+    wha = Math.trunc(Math.abs(Number(lpull) + Number(local))/2);
+    if(wha < 1){ wha = 0; }
+    if(wha > 99){ wha = 1; }
+    document.getElementById('box'+local).innerHTML = wha;
+	
+	 document.getElementById('proofs').innerHTML = "box" + location + ", " + wha + ", " + direct;
+     colorme("box" + location,wha,direct); //where to color, value to color with, direction for RGBA section selector
+   }
+	
+	 document.getElementById('proofs').innerHTML = "box" + location + ", " + wha + ", " + direct;
+     colorme("box" + location,wha,direct); //where to color, value to color with, direction for RGBA section selector
+ }
+ 
+ if(location == 3){
+  maths = Math.floor(Math.random()*Number(three.length));
+  local = three[maths];
+  lpull = document.getElementById('box'+local).innerHTML;
+  document.getElementById('box'+location).innerHTML = Math.abs(Number(document.getElementById('box'+location).innerHTML) - Number(local));
+  //document.getElementById('box'+location).innerHTML = "0";
+  
+  ram = document.getElementById('ram').innerHTML;
+   if(ram == 0){
+    var what = document.getElementById('box'+local).innerHTML;
+	
+    wha = Math.trunc(Math.abs(Number(lpull) + Number(local))/3);
+    if(wha < 1){ wha = 0; }
+    if(wha > 99){ wha = 1; }
+    document.getElementById('box'+local).innerHTML = wha;
+
+    setTimeout(lightsout("box"+lpull, what), 1200);
+   }
+   else{
+    wha = Math.trunc(Math.abs(Number(lpull) + Number(local))/2);
+    if(wha < 1){ wha = 0; }
+    if(wha > 99){ wha = 1; }
+    document.getElementById('box'+local).innerHTML = wha;
+	
+	 document.getElementById('proofs').innerHTML = "box" + location + ", " + wha + ", " + direct;
+     colorme("box" + location,wha,direct); //where to color, value to color with, direction for RGBA section selector
+   }
+	
+	 document.getElementById('proofs').innerHTML = "box" + location + ", " + wha + ", " + direct;
+     colorme("box" + location,wha,direct); //where to color, value to color with, direction for RGBA section selector
+ }
+ 
+ if(location == 4){
+  maths = Math.floor(Math.random()*Number(four.length));
+  local = four[maths];
+  lpull = document.getElementById('box'+local).innerHTML;
+  document.getElementById('box'+location).innerHTML = Math.abs(Number(document.getElementById('box'+location).innerHTML) - Number(local));
+  //document.getElementById('box'+location).innerHTML = "0";
+  
+  ram = document.getElementById('ram').innerHTML;
+   if(ram == 0){
+    var what = document.getElementById('box'+local).innerHTML;
+	
+    wha = Math.trunc(Math.abs(Number(lpull) + Number(local))/3);
+    if(wha < 1){ wha = 0; }
+    if(wha > 99){ wha = 1; }
+    document.getElementById('box'+local).innerHTML = wha;
+
+    setTimeout(lightsout("box"+lpull, what), 1200);
+   }
+   else{
+    wha = Math.trunc(Math.abs(Number(lpull) + Number(local))/2);
+    if(wha < 1){ wha = 0; }
+    if(wha > 99){ wha = 1; }
+    document.getElementById('box'+local).innerHTML = wha;
+	
+	 document.getElementById('proofs').innerHTML = "box" + location + ", " + wha + ", " + direct;
+     colorme("box" + location,wha,direct); //where to color, value to color with, direction for RGBA section selector
+   }
+	
+	 document.getElementById('proofs').innerHTML = "box" + location + ", " + wha + ", " + direct;
+     colorme("box" + location,wha,direct); //where to color, value to color with, direction for RGBA section selector
+ }
+ 
+ if(location == 5){
+  maths = Math.floor(Math.random()*Number(five.length));
+  local = five[maths];
+  lpull = document.getElementById('box'+local).innerHTML;
+  document.getElementById('box'+location).innerHTML = Math.abs(Number(document.getElementById('box'+location).innerHTML) - Number(local));
+  //document.getElementById('box'+location).innerHTML = "0";
+  
+  ram = document.getElementById('ram').innerHTML;
+   if(ram == 0){
+    var what = document.getElementById('box'+local).innerHTML;
+	
+    wha = Math.trunc(Math.abs(Number(lpull) + Number(local))/3);
+    if(wha < 1){ wha = 0; }
+    if(wha > 99){ wha = 1; }
+    document.getElementById('box'+local).innerHTML = wha;
+
+    setTimeout(lightsout("box"+lpull, what), 1200);
+   }
+   else{
+    wha = Math.trunc(Math.abs(Number(lpull) + Number(local))/2);
+    if(wha < 1){ wha = 0; }
+    if(wha > 99){ wha = 1; }
+    document.getElementById('box'+local).innerHTML = wha;
+	
+	 document.getElementById('proofs').innerHTML = "box" + location + ", " + wha + ", " + direct;
+     colorme("box" + location,wha,direct); //where to color, value to color with, direction for RGBA section selector
+   }
+	
+	 document.getElementById('proofs').innerHTML = "box" + location + ", " + wha + ", " + direct;
+     colorme("box" + location,wha,direct); //where to color, value to color with, direction for RGBA section selector
+ }
+
+ if(location == 6){
+  maths = Math.floor(Math.random()*Number(six.length));
+  local = six[maths];
+  lpull = document.getElementById('box'+local).innerHTML;
+  document.getElementById('box'+location).innerHTML = Math.abs(Number(document.getElementById('box'+location).innerHTML) - Number(local));
+  //document.getElementById('box'+location).innerHTML = "0";
+  
+  ram = document.getElementById('ram').innerHTML;
+   if(ram == 0){
+    var what = document.getElementById('box'+local).innerHTML;
+	
+    wha = Math.trunc(Math.abs(Number(lpull) + Number(local))/3);
+    if(wha < 1){ wha = 0; }
+    if(wha > 99){ wha = 1; }
+    document.getElementById('box'+local).innerHTML = wha;
+
+    setTimeout(lightsout("box"+lpull, what), 1200);
+   }
+   else{
+    wha = Math.trunc(Math.abs(Number(lpull) + Number(local))/2);
+    if(wha < 1){ wha = 0; }
+    if(wha > 99){ wha = 1; }
+    document.getElementById('box'+local).innerHTML = wha;
+	
+	 document.getElementById('proofs').innerHTML = "box" + location + ", " + wha + ", " + direct;
+     colorme("box" + location,wha,direct); //where to color, value to color with, direction for RGBA section selector
+   }
+	
+	 document.getElementById('proofs').innerHTML = "box" + location + ", " + wha + ", " + direct;
+     colorme("box" + location,wha,direct); //where to color, value to color with, direction for RGBA section selector
+ }
+ 
+ if(location == 7){
+  maths = Math.floor(Math.random()*Number(seven.length));
+  local = seven[maths];
+  lpull = document.getElementById('box'+local).innerHTML;
+  document.getElementById('box'+location).innerHTML = Math.abs(Number(document.getElementById('box'+location).innerHTML) - Number(local));
+  //document.getElementById('box'+location).innerHTML = "0";
+  
+  ram = document.getElementById('ram').innerHTML;
+   if(ram == 0){
+    var what = document.getElementById('box'+local).innerHTML;
+	
+    wha = Math.trunc(Math.abs(Number(lpull) + Number(local))/3);
+    if(wha < 1){ wha = 0; }
+    if(wha > 99){ wha = 1; }
+    document.getElementById('box'+local).innerHTML = wha;
+
+    setTimeout(lightsout("box"+lpull, what), 1200);
+   }
+   else{
+    wha = Math.trunc(Math.abs(Number(lpull) + Number(local))/2);
+    if(wha < 1){ wha = 0; }
+    if(wha > 99){ wha = 1; }
+    document.getElementById('box'+local).innerHTML = wha;
+	
+	 document.getElementById('proofs').innerHTML = "box" + location + ", " + wha + ", " + direct;
+     colorme("box" + location,wha,direct); //where to color, value to color with, direction for RGBA section selector
+   }
+	
+	 document.getElementById('proofs').innerHTML = "box" + location + ", " + wha + ", " + direct;
+     colorme("box" + location,wha,direct); //where to color, value to color with, direction for RGBA section selector
+ }
+ 
+ if(location == 8){
+  maths = Math.floor(Math.random()*Number(eight.length));
+  local = eight[maths];
+  lpull = document.getElementById('box'+local).innerHTML;
+  document.getElementById('box'+location).innerHTML = Math.abs(Number(document.getElementById('box'+location).innerHTML) - Number(local));
+  //document.getElementById('box'+location).innerHTML = "0";
+  
+  ram = document.getElementById('ram').innerHTML;
+   if(ram == 0){
+    var what = document.getElementById('box'+local).innerHTML;
+	
+    wha = Math.trunc(Math.abs(Number(lpull) + Number(local))/3);
+    if(wha < 1){ wha = 0; }
+    if(wha > 99){ wha = 1; }
+    document.getElementById('box'+local).innerHTML = wha;
+
+    setTimeout(lightsout("box"+lpull, what), 1200);
+   }
+   else{
+    wha = Math.trunc(Math.abs(Number(lpull) + Number(local))/2);
+    if(wha < 1){ wha = 0; }
+    if(wha > 99){ wha = 1; }
+    document.getElementById('box'+local).innerHTML = wha;
+	
+	 document.getElementById('proofs').innerHTML = "box" + location + ", " + wha + ", " + direct;
+     colorme("box" + location,wha,direct); //where to color, value to color with, direction for RGBA section selector
+   }
+	
+	 document.getElementById('proofs').innerHTML = "box" + location + ", " + wha + ", " + direct;
+     colorme("box" + location,wha,direct); //where to color, value to color with, direction for RGBA section selector
+ }
+ 
+ if(location == 9){
+  maths = Math.floor(Math.random()*Number(nine.length));
+  local = nine[maths];
+  lpull = document.getElementById('box'+local).innerHTML;
+  document.getElementById('box'+location).innerHTML = Math.abs(Number(document.getElementById('box'+location).innerHTML) - Number(local));
+  //document.getElementById('box'+location).innerHTML = "0";
+  
+  ram = document.getElementById('ram').innerHTML;
+   if(ram == 0){
+    var what = document.getElementById('box'+local).innerHTML;
+	
+    wha = Math.trunc(Math.abs(Number(lpull) + Number(local))/3);
+    if(wha < 1){ wha = 0; }
+    if(wha > 99){ wha = 1; }
+    document.getElementById('box'+local).innerHTML = wha;
+
+    setTimeout(lightsout("box"+lpull, what), 1200);
+   }
+   else{
+    wha = Math.trunc(Math.abs(Number(lpull) + Number(local))/2);
+    if(wha < 1){ wha = 0; }
+    if(wha > 99){ wha = 1; }
+    document.getElementById('box'+local).innerHTML = wha;
+	
+	 document.getElementById('proofs').innerHTML = "box" + location + ", " + wha + ", " + direct;
+     colorme("box" + location,wha,direct); //where to color, value to color with, direction for RGBA section selector
+   }
+	
+	 document.getElementById('proofs').innerHTML = "box" + location + ", " + wha + ", " + direct;
+     colorme("box" + location,wha,direct); //where to color, value to color with, direction for RGBA section selector
+ }
+ 
+ if(location == 10){
+  maths = Math.floor(Math.random()*Number(ten.length));
+  local = ten[maths];
+  lpull = document.getElementById('box'+local).innerHTML;
+  document.getElementById('box'+location).innerHTML = Math.abs(Number(document.getElementById('box'+location).innerHTML) - Number(local));
+  //document.getElementById('box'+location).innerHTML = "0";
+  
+  ram = document.getElementById('ram').innerHTML;
+   if(ram == 0){
+    var what = document.getElementById('box'+local).innerHTML;
+	
+    wha = Math.trunc(Math.abs(Number(lpull) + Number(local))/3);
+    if(wha < 1){ wha = 0; }
+    if(wha > 99){ wha = 1; }
+    document.getElementById('box'+local).innerHTML = wha;
+
+    setTimeout(lightsout("box"+lpull, what), 1200);
+   }
+   else{
+    wha = Math.trunc(Math.abs(Number(lpull) + Number(local))/2);
+    if(wha < 1){ wha = 0; }
+    if(wha > 99){ wha = 1; }
+    document.getElementById('box'+local).innerHTML = wha;
+	
+	 document.getElementById('proofs').innerHTML = "box" + location + ", " + wha + ", " + direct;
+     colorme("box" + location,wha,direct); //where to color, value to color with, direction for RGBA section selector
+   }
+	
+	 document.getElementById('proofs').innerHTML = "box" + location + ", " + wha + ", " + direct;
+     colorme("box" + location,wha,direct); //where to color, value to color with, direction for RGBA section selector
+ }
+ 
+ if(location == 11){
+  maths = Math.floor(Math.random()*Number(eleven.length));
+  local = eleven[maths];
+  lpull = document.getElementById('box'+local).innerHTML;
+  document.getElementById('box'+location).innerHTML = Math.abs(Number(document.getElementById('box'+location).innerHTML) - Number(local));
+  //document.getElementById('box'+location).innerHTML = "0";
+  
+  ram = document.getElementById('ram').innerHTML;
+   if(ram == 0){
+    var what = document.getElementById('box'+local).innerHTML;
+	
+    wha = Math.trunc(Math.abs(Number(lpull) + Number(local))/3);
+    if(wha < 1){ wha = 0; }
+    if(wha > 99){ wha = 1; }
+    document.getElementById('box'+local).innerHTML = wha;
+
+    setTimeout(lightsout("box"+lpull, what), 1200);
+   }
+   else{
+    wha = Math.trunc(Math.abs(Number(lpull) + Number(local))/2);
+    if(wha < 1){ wha = 0; }
+    if(wha > 99){ wha = 1; }
+    document.getElementById('box'+local).innerHTML = wha;
+	
+	 document.getElementById('proofs').innerHTML = "box" + location + ", " + wha + ", " + direct;
+     colorme("box" + location,wha,direct); //where to color, value to color with, direction for RGBA section selector
+   }
+	
+	 document.getElementById('proofs').innerHTML = "box" + location + ", " + wha + ", " + direct;
+     colorme("box" + location,wha,direct); //where to color, value to color with, direction for RGBA section selector
+ }
+ 
+ if(location == 12){
+  maths = Math.floor(Math.random()*Number(tweleve.length));
+  local = tweleve[maths];
+  lpull = document.getElementById('box'+local).innerHTML;
+  document.getElementById('box'+location).innerHTML = Math.abs(Number(document.getElementById('box'+location).innerHTML) - Number(local));
+  //document.getElementById('box'+location).innerHTML = "0";
+  
+  ram = document.getElementById('ram').innerHTML;
+   if(ram == 0){
+    var what = document.getElementById('box'+local).innerHTML;
+	
+    wha = Math.trunc(Math.abs(Number(lpull) + Number(local))/3);
+    if(wha < 1){ wha = 0; }
+    if(wha > 99){ wha = 1; }
+    document.getElementById('box'+local).innerHTML = wha;
+
+    setTimeout(lightsout("box"+lpull, what), 1200);
+   }
+   else{
+    wha = Math.trunc(Math.abs(Number(lpull) + Number(local))/2);
+    if(wha < 1){ wha = 0; }
+    if(wha > 99){ wha = 1; }
+    document.getElementById('box'+local).innerHTML = wha;
+	
+	 document.getElementById('proofs').innerHTML = "box" + location + ", " + wha + ", " + direct;
+     colorme("box" + location,wha,direct); //where to color, value to color with, direction for RGBA section selector
+   }
+	
+	 document.getElementById('proofs').innerHTML = "box" + location + ", " + wha + ", " + direct;
+     colorme("box" + location,wha,direct); //where to color, value to color with, direction for RGBA section selector
+ }
+ 
+ if(location == 13){
+  maths = Math.floor(Math.random()*Number(thirteen.length));
+  local = thirteen[maths];
+  lpull = document.getElementById('box'+local).innerHTML;
+  document.getElementById('box'+location).innerHTML = Math.abs(Number(document.getElementById('box'+location).innerHTML) - Number(local));
+  //document.getElementById('box'+location).innerHTML = "0";
+  
+  ram = document.getElementById('ram').innerHTML;
+   if(ram == 0){
+    var what = document.getElementById('box'+local).innerHTML;
+	
+    wha = Math.trunc(Math.abs(Number(lpull) + Number(local))/3);
+    if(wha < 1){ wha = 0; }
+    if(wha > 99){ wha = 1; }
+    document.getElementById('box'+local).innerHTML = wha;
+
+    setTimeout(lightsout("box"+lpull, what), 1200);
+   }
+   else{
+    wha = Math.trunc(Math.abs(Number(lpull) + Number(local))/2);
+    if(wha < 1){ wha = 0; }
+    if(wha > 99){ wha = 1; }
+    document.getElementById('box'+local).innerHTML = wha;
+	
+	 document.getElementById('proofs').innerHTML = "box" + location + ", " + wha + ", " + direct;
+     colorme("box" + location,wha,direct); //where to color, value to color with, direction for RGBA section selector
+   }
+	
+	 document.getElementById('proofs').innerHTML = "box" + location + ", " + wha + ", " + direct;
+     colorme("box" + location,wha,direct); //where to color, value to color with, direction for RGBA section selector
+ }
+ 
+ if(location == 14){
+  maths = Math.floor(Math.random()*Number(fourteen.length));
+  local = fourteen[maths];
+  lpull = document.getElementById('box'+local).innerHTML;
+  document.getElementById('box'+location).innerHTML = Math.abs(Number(document.getElementById('box'+location).innerHTML) - Number(local));
+  //document.getElementById('box'+location).innerHTML = "0";
+  
+  ram = document.getElementById('ram').innerHTML;
+   if(ram == 0){
+    var what = document.getElementById('box'+local).innerHTML;
+	
+    wha = Math.trunc(Math.abs(Number(lpull) + Number(local))/3);
+    if(wha < 1){ wha = 0; }
+    if(wha > 99){ wha = 1; }
+    document.getElementById('box'+local).innerHTML = wha;
+
+    setTimeout(lightsout("box"+lpull, what), 1200);
+   }
+   else{
+    wha = Math.trunc(Math.abs(Number(lpull) + Number(local))/2);
+    if(wha < 1){ wha = 0; }
+    if(wha > 99){ wha = 1; }
+    document.getElementById('box'+local).innerHTML = wha;
+	
+	 document.getElementById('proofs').innerHTML = "box" + location + ", " + wha + ", " + direct;
+     colorme("box" + location,wha,direct); //where to color, value to color with, direction for RGBA section selector
+   }
+	
+	 document.getElementById('proofs').innerHTML = "box" + location + ", " + wha + ", " + direct;
+     colorme("box" + location,wha,direct); //where to color, value to color with, direction for RGBA section selector
+ }
+ 
+ if(location == 15){
+  maths = Math.floor(Math.random()*Number(fifthteen.length));
+  local = fifthteen[maths];
+  lpull = document.getElementById('box'+local).innerHTML;
+  document.getElementById('box'+location).innerHTML = Math.abs(Number(document.getElementById('box'+location).innerHTML) - Number(local));
+  //document.getElementById('box'+location).innerHTML = "0";
+  
+  ram = document.getElementById('ram').innerHTML;
+   if(ram == 0){
+    var what = document.getElementById('box'+local).innerHTML;
+	
+    wha = Math.trunc(Math.abs(Number(lpull) + Number(local))/3);
+    if(wha < 1){ wha = 0; }
+    if(wha > 99){ wha = 1; }
+    document.getElementById('box'+local).innerHTML = wha;
+
+    setTimeout(lightsout("box"+lpull, what), 1200);
+   }
+   else{
+    wha = Math.trunc(Math.abs(Number(lpull) + Number(local))/2);
+    if(wha < 1){ wha = 0; }
+    if(wha > 99){ wha = 1; }
+    document.getElementById('box'+local).innerHTML = wha;
+	
+	 document.getElementById('proofs').innerHTML = "box" + location + ", " + wha + ", " + direct;
+     colorme("box" + location,wha,direct); //where to color, value to color with, direction for RGBA section selector
+   }
+	
+	 document.getElementById('proofs').innerHTML = "box" + location + ", " + wha + ", " + direct;
+     colorme("box" + location,wha,direct); //where to color, value to color with, direction for RGBA section selector
+ }
+
+ if(location == 16){
+  maths = Math.floor(Math.random()*Number(sixteen.length));
+  local = sixteen[maths];
+  lpull = document.getElementById('box'+local).innerHTML;
+  document.getElementById('box'+location).innerHTML = Math.abs(Number(document.getElementById('box'+location).innerHTML) - Number(local));
+  //document.getElementById('box'+location).innerHTML = "0";
+  
+  ram = document.getElementById('ram').innerHTML;
+   if(ram == 0){
+    var what = document.getElementById('box'+local).innerHTML;
+	
+    wha = Math.trunc(Math.abs(Number(lpull) + Number(local))/3);
+    if(wha < 1){ wha = 0; }
+    if(wha > 99){ wha = 1; }
+    document.getElementById('box'+local).innerHTML = wha;
+
+    setTimeout(lightsout("box"+lpull, what), 1200);
+   }
+   else{
+    wha = Math.trunc(Math.abs(Number(lpull) + Number(local))/2);
+    if(wha < 1){ wha = 0; }
+    if(wha > 99){ wha = 1; }
+    document.getElementById('box'+local).innerHTML = wha;
+	
+	 document.getElementById('proofs').innerHTML = "box" + location + ", " + wha + ", " + direct;
+     colorme("box" + location,wha,direct); //where to color, value to color with, direction for RGBA section selector
+	
+	
+   }
+	
+	 document.getElementById('proofs').innerHTML = "box" + location + ", " + wha + ", " + direct;
+     colorme("box" + location,wha,direct); //where to color, value to color with, direction for RGBA section selector
+ }
+
+//var next = Math.abs(Number(lpull) + Number(local));
+
+
+ 
+
+ 
+if(wha > 0 && wha <= 16){
+var what = document.getElementById('box'+local).innerHTML;
+
+ setTimeout(lightsout("box"+lpull, what), 1200);
+}
+else{
+ ended();
+ 
+}
+
+ //var wemb = "box" + location;
+// colorme("box" + location,wha,direct); //where to color, value to color with, direction for RGBA section selector
+// document.getElementById('proofs').innerHTML = "box" + location + ", " + wha + ", " + direct;
+ 
+ 
+}
+
+
+
+
+
+function ended(){
+ var jim = ''; //document.getElementById('endput').innerHTML;
+
+  for(var zed = 0;zed<=17;zed++){
+   if(zed == 17){
+    document.getElementById('endput').innerHTML = jim;
+	jim = ''; //reset jim 
+   }	
+   else{
+    jim += document.getElementById('box'+zed).innerHTML;
+	
+	if(zed == 0 || zed == 4 || zed == 8 || zed == 12){ 
+      jim += ",";
+    }
+  }
+  
+  }
+  
+  var endcheck = document.getElementById('endput').innerHTML;
+  if(Number(endcheck.toString().replace(',', '')) === "00000000000000000" || Number(endcheck.toString().replace(',', '')) == 00000000000000000) {
+  
+    var endis = document.getElementById('output').innerHTML;
+	document.getElementById('output').innerHTML = "Whoa! You did it! Congrats!</br></br>" + endis;
+  
+  }
+  
+}
+
+
+
+
+function colorme(x,cvalue,nav) {
+ 
+ var location = x.toString().split('box')[1]; //number after "box"
+ var value = cvalue;
+ var direct = nav;
+ var red = '', green = '', blue = '', alpha = '';
+ 
+ if(location == 0){
+  //North
+  red = Math.abs(Number(value)-255);
+  green = Math.abs(Number(red)-255);
+  blue = Math.abs(Number(green)-255);
+  alpha = Math.abs(Number(value)/Number(red)).toFixed(2);
+  
+  if(alpha > 1){ //overflow check
+  do{
+   var tal = alpha;
+   alpha = Math.abs(Number(tal)/value).toFixed(2);
+   }
+   while(alpha > 1);
+   }
+   
+   if(alpha <= -1){ //underflow & over-underflowed check
+    var tal = alpha;
+	alpha = Math.random(Math.random()*1).toFixed(2);
+   }
+   
+   if(red > 255) {
+    var tcol = Math.abs(Number(red)-255);
+	var tred = red;
+	
+	red = Math.abs(Number(tred)-Number(tcol));
+	
+   }
+   
+   if(green > 255) {
+    var tcol = Math.abs(Number(green)-255);
+	var tgreen = green;
+	
+	green = Math.abs(Number(tgreen)-Number(tcol));
+	
+   }
+   
+   if(blue > 255) {
+    var tcol = Math.abs(Number(blue)-255);
+	var tblue = blue;
+	
+	blue = Math.abs(Number(tblue)-Number(tcol));
+	
+   }
+ 
+ }
+ 
+ 
+ if(location == 1){
+  //East
+  green = Math.abs(Number(value)-255);
+  blue = Math.abs(Number(green)-255);
+  red = Math.abs(Number(blue)-255);
+  alpha = Math.abs(Number(value)/Number(green)).toFixed(2);
+  
+  if(alpha > 1){ //overflow check
+  do{
+   var tal = alpha;
+   alpha = Math.abs(Number(tal)/value).toFixed(2);
+   }
+   while(alpha > 1);
+   }
+   
+   if(alpha <= -1){ //underflow & over-underflowed check
+    var tal = alpha;
+	alpha = Math.random(Math.random()*1).toFixed(2);
+   }
+   
+   if(red > 255) {
+    var tcol = Math.abs(Number(red)-255);
+	var tred = red;
+	
+	red = Math.abs(Number(tred)-Number(tcol));
+	
+   }
+   
+   if(green > 255) {
+    var tcol = Math.abs(Number(green)-255);
+	var tgreen = green;
+	
+	green = Math.abs(Number(tgreen)-Number(tcol));
+	
+   }
+   
+   if(blue > 255) {
+    var tcol = Math.abs(Number(blue)-255);
+	var tblue = blue;
+	
+	blue = Math.abs(Number(tblue)-Number(tcol));
+	
+   }
+ 
+ }
+ 
+ if(location == 2){
+  //North
+  blue = Math.abs(Number(value)-255);
+  red = Math.abs(Number(blue)-255);
+  green = Math.abs(Number(red)-255);
+  alpha = Math.abs(Number(value)/Number(blue)).toFixed(2);
+  
+  if(alpha > 1){ //overflow check
+  do{
+   var tal = alpha;
+   alpha = Math.abs(Number(tal)/value).toFixed(2);
+   }
+   while(alpha > 1);
+   }
+   
+   if(alpha <= -1){ //underflow & over-underflowed check
+    var tal = alpha;
+	alpha = Math.random(Math.random()*1).toFixed(2);
+   }
+   
+   if(red > 255) {
+    var tcol = Math.abs(Number(red)-255);
+	var tred = red;
+	
+	red = Math.abs(Number(tred)-Number(tcol));
+	
+   }
+   
+   if(green > 255) {
+    var tcol = Math.abs(Number(green)-255);
+	var tgreen = green;
+	
+	green = Math.abs(Number(tgreen)-Number(tcol));
+	
+   }
+   
+   if(blue > 255) {
+    var tcol = Math.abs(Number(blue)-255);
+	var tblue = blue;
+	
+	blue = Math.abs(Number(tblue)-Number(tcol));
+	
+   }
+ 
+ }
+ 
+ if(location == 3){
+  //North
+  blue = Math.abs(Number(value)-255);
+  red = Math.abs(Number(value)-255);
+  green = Math.abs(Number(value)-255);
+  alpha = Math.abs(Number(value)/Math.abs(Number(red)+Number(green)+Number(blue))).toFixed(2);
+  
+  if(alpha > 1){ //overflow check
+  do{
+   var tal = alpha;
+   alpha = Math.abs(Number(tal)/value).toFixed(2);
+   }
+   while(alpha > 1);
+   }
+   
+   if(alpha <= -1){ //underflow & over-underflowed check
+    var tal = alpha;
+	alpha = Math.random(Math.random()*1).toFixed(2);
+   }
+   
+   if(red > 255) {
+    var tcol = Math.abs(Number(red)-255);
+	var tred = red;
+	
+	red = Math.abs(Number(tred)-Number(tcol));
+	
+   }
+   
+   if(green > 255) {
+    var tcol = Math.abs(Number(green)-255);
+	var tgreen = green;
+	
+	green = Math.abs(Number(tgreen)-Number(tcol));
+	
+   }
+   
+   if(blue > 255) {
+    var tcol = Math.abs(Number(blue)-255);
+	var tblue = blue;
+	
+	blue = Math.abs(Number(tblue)-Number(tcol));
+	
+   }
+ 
+ }
+ 
+ alpha = Math.random(alpha*10).toFixed(2);
+ 
+	if(blue < 0 || blue == ''){
+	 blue = "1"+Math.random(Math.random()*255).toFixed(2).toString().split(".")[1];
+	}
+	
+	if(green < 0 || green == ''){
+	 green =  "1"+Math.random(Math.random()*255).toFixed(2).toString().split(".")[1];
+	}
+	
+	if(red < 0 || red == ''){
+	 red =  "1"+Math.random(Math.random()*255).toFixed(2).toString().split(".")[1];
+	}
+
+	
+ 
+ document.getElementById("box"+location).style = "order:"+location+";width:24vw;padding:0.5vw;hieght:24vw;background-color:rgb("+Number(red)+","+Number(green)+","+Number(blue)+","+Number(alpha)+");color:rgb("+Number(red)+","+Number(red)+","+Number(red)+",1);";
+ document.getElementById('proofs').innerHTML += " || " + red+","+green+","+blue+","+alpha;
+}
+
+</script>
