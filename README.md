@@ -34,11 +34,11 @@ You, the Jedi, must vanquish the darkness by turning off every light on the grid
 ## Credits
 
 **Original Game & BSDM Model:** DigiMancer3D  
-**Game Design, Star Wars Theme, and Flipper Zero Port:** DigiMancer3D & GitHub Copilot AI 
-**Game Re-Design, Bug Fixes, Formed a portable version of lofz.c file code:** @Z0M8I3D & Grok (ver 3) AI visavis xAI over xTwitter
+**Game Design, Star Wars Theme, and Flipper Zero Port:** DigiMancer3D & GitHub Copilot AI  
+**Game Re-Design, Bug Fixes, Formed a portable version of lofz.c file code:** @Z0M8I3D & Grok (ver 3) AI visavis xAI over xTwitter  
 **Flipper Zero Mascot:** Flipper Devices Team  
-**AI JS code to C code Assistance:** [GitHub Copilot AI](https://github.com/github/copilot) 
-**AI Code Fixing Assistance:** [xAI Grok 3]([https://github.com/github/copilot](https://grok.com/))
+**AI JS code to C code Assistance:** [GitHub Copilot AI](https://github.com/github/copilot)  
+**AI Code Fixing Assistance:** [xAI Grok 3](https://grok.com/)  
 
 
 ---
