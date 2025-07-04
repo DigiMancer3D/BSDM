@@ -5,7 +5,7 @@ env.Append(
         "name": "lofz",
         "fam": "application.fam",
         "src": [
-            "main.c",
+            "lofz.c",
         ],
     }
 )
