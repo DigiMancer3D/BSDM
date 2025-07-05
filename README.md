@@ -19,6 +19,7 @@ What started as a JS tool to test a theory on Bi-Sectoinal based diffusion model
 - **Animated credits sequence** and special secret access (see below).
 - **Hidden Easter egg:** Tap right 3 or more times quickly to trigger the credits at almost any time.
 - **Scrolling text and popup messages** for Flipper AI moves and long messages.
+- **Flipper Stress Mode** When you or Flipper gets near a potential win, Flipper may move a bit more sparatically or slowly. Flipper has a chance for unusal movement patterns during times of stress.
 - **Versus Flipper AI**—see if you can beat the Flipper Zero Sith!
 
 ---
