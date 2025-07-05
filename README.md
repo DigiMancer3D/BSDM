@@ -6,9 +6,14 @@ You, the Jedi, must vanquish the darkness by turning off every light on the grid
 
 ---
 
+## Lore
+
+What started as a JS tool to test a theory on Bi-Sectoinal based diffusion models became a slightly new lights out game. Similar to the obstacle lights out games, LOFZ offers some unique play method to win. An offset block that is technically below the rest of the grid board, it effects the center blocks or can. The enemy computer (Flipper) is the Sith Lord keeping everyone awake. You are the last Jedi that just has to turn off the lights on Flipper to win this battle...until next time at least.  So this version of Lights Out has more potential unfinishable states then any other Lights Out without going under a 3x3 common Lights out grid. That makes this one of the harder Lights Out games to be able to beat. This Flipper Zero game is designed to look pretty and give a sence of wonder. With the various fantasy themes built into the game screens, extras built inside and the failed internal leaderboard only leaves hope for more one day.
+
 ## Features
 
 - **Star Wars style intro crawl** before the game begins, complete with scrolling rules and credits.
+- **Dynamic line hieght** for all scrolling crawlers.
 - **3D perspective game board** and Flipper Zero Sith mascot.
 - **Unique "lost nulls" lose condition:** If all tiles are in the ON state, the Flipper Zero mascot wins and you see a "died" screen with animation and rematch menu!
 - **Animated credits sequence** and special secret access (see below).
